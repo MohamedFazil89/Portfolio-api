@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4"
+  },
+  "scripts": {
+    "server": "node server.js",
+    "client": "cd MyPortfolio- && npm start",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\""
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
