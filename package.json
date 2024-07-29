@@ -8,10 +8,12 @@
     "nodemon": "^3.1.4"
   },
   "scripts": {
-   "server": "node server.js",
+    "server": "node server.js",
     "client": "npm --prefix MyPortfolio- start",
-    "client:build": "npm --prefix MyPortfolio- install && npm --prefix MyPortfolio- run build",
-    "dev": "concurrently \"nodemon server.js\" \"npm run client\""
+    "client:install": "npm --prefix MyPortfolio- install",
+    "client:build": "npm --prefix MyPortfolio- run build",
+    "dev": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "npm run client:install && npm run client:build"
   },
   "name": "portfolio",
   "version": "1.0.0",

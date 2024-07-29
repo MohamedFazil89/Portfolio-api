@@ -13,6 +13,12 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+app.use(express.static(path.join(__dirname, 'MyPortfolio-', 'build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'MyPortfolio-', 'build', 'index.html'));
+});
+
 app.post("/api/send", (req, res) => {
     const { name, email, message } = req.body;
     const mailOptions = {
