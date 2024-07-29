@@ -9,7 +9,7 @@
   },
   "scripts": {
     "server": "node server.js",
-    "client": "npm --prefix MyPortfolio- start",
+    "client:build": "npm --prefix MyPortfolio- install && npm --prefix MyPortfolio- run build",
     "dev": "concurrently \"nodemon server.js\" \"npm run client\""
   },
   "name": "portfolio",
